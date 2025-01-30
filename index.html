@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKC smarak Hopital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+ 
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            z-index: 100;
+        }
+ 
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+ 
+        .logo {
+            color: orange;
+            font-size: 24px;
+            font-weight: bold;
+        }
+ 
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+ 
+        .nav-links a {
+            color: yellow;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+ 
+        .nav-links a:hover {
+            color: #ff4d4d;
+        }
+ 
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://lh5.googleusercontent.com/proxy/xK8LRiSh704-RYW72nr6qI-YnLUTL9LpR6vAqi2QswQPCLVPU_H5E8jd6qONfodhjp0-BSEWma04RenBKM_Pkw');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: orange;
+            background-color:;
+        }
+ 
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+ 
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+ 
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #ff4d4d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+ 
+        .cta-button:hover {
+            background-color: #ff3333;
+        }
+ 
+        /* Featured Cars Section */
+        .featured-cars {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+ 
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+ 
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+ 
+        .car-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+ 
+        .car-card:hover {
+            transform: translateY(-10px);
+        }
+ 
+        .car-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+ 
+        .car-info {
+            padding: 20px;
+        }
+ 
+        .car-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+ 
+        .price {
+            color: #ff4d4d;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+ 
+          /*  thought Section */
+        .doctor's thought {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+ 
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+ 
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+ 
+        .doctor-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+ 
+        .doctor-card:hover {
+            transform: translateY(-10px);
+        }
+ 
+        .doctor-img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+ 
+        .doctor-info {
+            padding: 20px;
+        }
+ 
+        .doctor-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+ 
+        .price {
+            color: #ff4d4d;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+ 
+         About Section 
+        .about {
+            background-color: #f9f9f9;
+            padding: 80px 20px;
+        }
+ 
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+ 
+        .about-text {
+            color: #333;
+        }
+ 
+        .about-text p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+ 
+        .about-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+ 
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+ 
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+ 
+        .service-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+ 
+        .service-icon {
+            font-size: 40px;
+            color: #ff4d4d;
+            margin-bottom: 20px;
+        }
+ 
+        /* Contact Form */
+        .contact {
+            background-color: #f9f9f9;
+            padding: 80px 20px;
+        }
+ 
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+ 
+        .form-group {
+            margin-bottom: 20px;
+        }
+ 
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+ 
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+ 
+        .submit-btn {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+ 
+        .submit-btn:hover {
+            background-color: #ff3333;
+        }
+ 
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+ 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+ 
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+ 
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo"><span style="color:green;">V</span><span style="color:orange;">K</span><span style="color:blue;">C</span><span style="color:red;">Smarak Hospital</span></div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#featured">Doctors</a>
+                <a href="#thought">Doctor's thought</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#locatation">Locatation</a>
+            </div>
+        </div>
+    </nav>
+ 
+    <section id="home" class="hero">
+        <div class="hero-content">
+           <img style="border-radius:50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwySnK0D9hxDokXCEMwu9LjxFxaa2xuDbEZQ&s" alt="" />
+            <h1><span style="color:green">V</span><span style="color:orange">K</span><span style="color:blue">C</span><span style="color:red">Smarak Hospital(Multi speciality)</span></h1>
+            <p style="color:yellow">Where compassion meets excellence in Healthcare.</p>
+            <a href="#featured" class="cta-button">View Our Doctors</a>
+        </div>
+    </section>
+ 
+    <section id="featured" class="featured-cars">
+        <h2 style="color:green" class="section-title">Doctor's Deitals</h2>
+        <div class="car-grid">
+            <div class="car-card"> 
+               <a href="https://www.instagram.com/vkcshospital/reel/C9w0jnEOYE1/"> <img style="height:400px;weight:200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uPSorz8c-zgwJvmwbvT1oEKo4Ou3BQ65Vg&s" alt="Doctor 1" class="doctor-img">
+                  </a>
+                <div class="car-info">
+                    <h3 style="color:red;">Dr Pankaj chauhan</h3>
+                    <p style="color:blue;">dental surgeon</p>
+                    <div class="price">doctor fee only 50 rup</div>
+                </div>
+            </div>
+ 
+            <div class="car-card">
+                <a href="https://www.instagram.com/vkcshospital/p/C9UU6nrTgUw/?api=1&hl=zh-cn"> <img style="height:400px;weight:200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiip2mLCClhmSDZdmdZ-hF73lw7y1tVoNd3Q&s" alt="Doctor 2" class="car-img">
+                <div class="car-info">
+                </a>
+                    <h3 style="color:red;">Dr Rajesh chauhan</h3>
+                    <p style="color:blue;">MBBS MD</p>
+                    <div class="price">doctor fee only 50 rup</div>
+                </div>
+            </div>
+ 
+            <div class="car-card">
+                <img style="height:400px;weight:200px;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnJJBxs1nui8JeWRTf0gOGUYJimDXFsoGZJA&s" alt= "Doctor 3" class="car-img">
+                <div class="car-info">
+                   <h3 style="color:red;">Dr Rajan chauhan</h3>
+                    <p style="color:blue;">BAMS(Generalphysician)</p>
+                    <div class="price">doctor fee only 50 rup</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <section id="thought"  class="doctor's thought">
+       <h2 style="color:orange" class="section-title">Doctor's thought</h2>
+       
+      <div style="display:flex; justify-content:space-betweeen" class="doctor-card">
+      <div class="doctor-card">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBO1I5PHYu7NhcDYZa2O1E4JtTin9JzE5ob8AJHGO-fsQelYwN4ch8zLAQzH_75fu-pQ&usqp=CAU" alt="Doctor 1" class="doctor-img">
+     <div class="doctor-info">
+  <h3 style="color:red">Dr Amit chauhan</h3>
+ </div>
+      </div>
+   <div class="doctor-card">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiip2mLCClhmSDZdmdZ-hF73lw7y1tVoNd3Q&s" alt="Doctor 2" class="doctor-img">
+     <div class="doctor-info">
+  <h3 style="color:red">Dr Rajesh chauhan</h3>
+ </div>
+ </div>
+  <div class="doctor-card">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTayoD_DapOmwqERvnJWAu090loq-xwlY3a3g&s" alt="Doctor 3" class="doctor-img">
+     <div class="doctor-info">
+   <h3 style="color:red">Dr Rajan chauhan</h3>
+   
+   </section>
+  
+   
+   
+    <section  id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 style="color:red;" class="section-title">About Us</h2>
+                <p style="color:blue;">We are strived in creation of an Integrated Multispeciality Heathcare System, Fostering, Protecting, Sustaining and Restoring Health through Best in Class Medical Practices and Cutting Edge Technologies in Each Domain of Medical Sciences, developed through in depth Research carried out by the World's Best Scientific Minds with the help of Allopathy, Naturopathy and Ayurveda by promoting the Medical Education System.</p>
+                <p style="color:blue;">Excel in the delivery of multi-specialized medical care supported by comprehensive medico research and education.</p>
+                <p style="color:blue;">VKC Smarak Multispeciality Hospital providing best services like hospitality, emergency, medical, eye department and dental department which identifies and defines the ethos of our Hospital.</p>
+             </div>
+            <img style="height:200px;border:15px solid black;" src="https://lh5.googleusercontent.com/proxy/xK8LRiSh704-RYW72nr6qI-YnLUTL9LpR6vAqi2QswQPCLVPU_H5E8jd6qONfodhjp0-BSEWma04RenBKM_Pkw" alt="Our Showroom" class="about-img">
+        </div>
+    </section>
+ 
+    <section id="services" class="services">
+        <h2 style="color:green;"class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div  class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3 style="color:green;">Emergency care</h3>
+                <p style="color:blue;">If you're having a medical emergency +91 94584 57331</p>
+            </div>
+ 
+            <div class="service-card">
+                <div class="service-icon">👩‍💻</div>
+                <h3 style="color:orange;">CUSTOMER DESK</h3>
+                <p style="color:blue;">Call 24/7</p>
+                <p style="color:blue;">+91 94584 57331</p>
+            </div>
+ 
+            <div class="service-card">
+                <div class="service-icon">🏠︎︎︎</div>
+                <h3 style="color:red;">ADDRESS</h3>
+                <p style="color:blue;">Garh - Siyana Rd, Wahabpur Thera Ideva,Garhmuktesar, Uttar Pradesh</p>
+            </div>
+        </div>
+    </section>
+ 
+    <section id="contact" class="contact">
+        <h2 style="color:orange;"class="section-title">Contact Us</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label style="color:red;"for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label style="color:red;" for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label style="color:red;" for="Contact number">Contact number</label>
+               <input type="number" id="number"required>
+            </div>
+            <div class="form-group"
+            <label style="color:red;"for="Address">Address</label>
+            <textarea id="Message" rows="2" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">SignUp</button>
+            
+        </form>
+    </section>
+    <section id="locatation" class="maps">
+    <div>
+      <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.3617129581176!2d78.0721439745747!3d28.67882458197866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390b6feb6cd4edf7%3A0xf709f42f257d06bd!2sVKC%20SMARAK%20MULTI-SPECIALITY%20HOSPITAL!5e0!3m2!1sen!2sin!4v1737536665087!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </section>
+    
+ 
+    <footer>
+        <p>&copy; VKC Smarak hospital. All rights reserved.</p>
+    </footer>
+</body>
+</html>
