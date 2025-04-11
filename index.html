@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            /*box-sizing: border-box;*/
             font-family: 'Arial', sans-serif;
         }
  
@@ -54,7 +55,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://lh5.googleusercontent.com/proxy/xK8LRiSh704-RYW72nr6qI-YnLUTL9LpR6vAqi2QswQPCLVPU_H5E8jd6qONfodhjp0-BSEWma04RenBKM_Pkw');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://assets.onecompiler.app/4352m5atk/43dbnq7wf/amit.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -62,7 +63,7 @@
             justify-content: center;
             text-align: center;
             color: orange;
-            background-color:;
+            background-color:white;
         }
  
         .hero-content h1 {
@@ -142,6 +143,65 @@
             margin: 10px 0;
         }
  
+           /* Gallery */
+        .gallery {
+            padding: 5rem 5%;
+        }
+ 
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+ 
+        .gallery-item {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+ 
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+ 
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+ 
+        About Section 
+        .about {
+            background-color: #f9f9f9;
+            padding: 80px 20px;
+        }
+ 
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+ 
+        .about-text {
+            color: #333;
+        }
+ 
+        .about-text p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+ 
+        .about-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+ 
+          
+          
           /*  thought Section */
         .doctor's thought {
             padding: 80px 20px;
@@ -196,7 +256,7 @@
             margin: 10px 0;
         }
  
-         About Section 
+         /*About Section */
         .about {
             background-color: #f9f9f9;
             padding: 80px 20px;
@@ -253,55 +313,75 @@
         }
  
         /* Contact Form */
-        .contact {
-            background-color: #f9f9f9;
-            padding: 80px 20px;
-        }
+        /*.contact {*/
+        /*    background-color: #f9f9f9;*/
+        /*    padding: 80px 20px;*/
+        /*}*/
  
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        /*.contact-form {*/
+        /*    max-width: 600px;*/
+        /*    margin: 0 auto;*/
+        /*}*/
  
-        .form-group {
-            margin-bottom: 20px;
-        }
+        /*.form-group {*/
+        /*    margin-bottom: 20px;*/
+        /*}*/
  
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-        }
+        /*.form-group label {*/
+        /*    display: block;*/
+        /*    margin-bottom: 5px;*/
+        /*    color: #333;*/
+        /*}*/
  
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+        /*.form-group input,*/
+        /*.form-group textarea {*/
+        /*    width: 100%;*/
+        /*    padding: 10px;*/
+        /*    border: 1px solid #ddd;*/
+        /*    border-radius: 5px;*/
+        /*}*/
  
-        .submit-btn {
-            background-color: #ff4d4d;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+        /*.submit-btn {*/
+        /*    background-color: #ff4d4d;*/
+        /*    color: white;*/
+        /*    padding: 15px 30px;*/
+        /*    border: none;*/
+        /*    border-radius: 5px;*/
+        /*    cursor: pointer;*/
+        /*    transition: background-color 0.3s;*/
+        /*}*/
  
-        .submit-btn:hover {
-            background-color: #ff3333;
-        }
+        /*.submit-btn:hover {*/
+        /*    background-color: #ff3333;*/
+        /*}*/
  
         /* Footer */
-        footer {
+        /*footer {*/
+        /*    background-color: #333;*/
+        /*    color: white;*/
+        /*    padding: 40px 20px;*/
+        /*    text-align: center;*/
+        /*}*/
+  /* Footer */
+        .footer {
             background-color: #333;
             color: white;
-            padding: 40px 20px;
+            padding: 3rem 5%;
             text-align: center;
         }
+ 
+        .social-links {
+            margin-top: 1.5rem;
+            color: white;
+        }
+ 
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+ 
  
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -323,14 +403,13 @@
 <body>
     <nav>
         <div class="nav-content">
-            <div class="logo"><span style="color:green;">V</span><span style="color:orange;">K</span><span style="color:blue;">C</span><span style="color:red;">Smarak Hospital</span></div>
+            <div class="logo"><span style="color:green;">V</span><span style="color:orange;">K</span><span style="color:blue;">C</span><span style="color:red;"> SMARAK HOSPITAL</span></div>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#featured">Doctors</a>
-                <a href="#thought">Doctor's thought</a>
+                <a href="#gallery">Gallery</a>
                 <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+                <a href="#services">Contact</a>
                 <a href="#locatation">Locatation</a>
             </div>
         </div>
@@ -339,7 +418,8 @@
     <section id="home" class="hero">
         <div class="hero-content">
            <img style="border-radius:50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwySnK0D9hxDokXCEMwu9LjxFxaa2xuDbEZQ&s" alt="" />
-            <h1><span style="color:green">V</span><span style="color:orange">K</span><span style="color:blue">C</span><span style="color:red">Smarak Hospital(Multi speciality)</span></h1>
+            <h1><span style="color:green">V</span><span style="color:orange">K</span><span style="color:blue">C</span><span style="color:red"> SMARAK HOSPITAL</span></h1>
+             <h2 style="text-align:right">(Multi speciality)</h2>
             <p style="color:yellow">Where compassion meets excellence in Healthcare.</p>
             <a href="#featured" class="cta-button">View Our Doctors</a>
         </div>
@@ -353,22 +433,36 @@
                   </a>
                 <div class="car-info">
                     <h3 style="color:red;">Dr Pankaj chauhan</h3>
-                    <p style="color:blue;">dental surgeon</p>
-                    <div class="price">doctor fee only 50 rup</div>
-                    <li style="color:green">Treat all patient 400</li>
-                    <li style="color:green">And some patient is very poor,so all treatment is free. like that:Mediscience;X-Ray...</li>
+                    <p style="color:blue">(General Maneger)</p>
+                    <p style="color:red;">dental surgeon</p>
+                    <!--<div class="price">doctor fee only 50 rup</div>-->
+                    <!--<li style="color:green">Treat all patient 400</li>-->
+                    <!--<li style="color:green">And some patient is very poor,so all treatment is free. like that:Mediscience;X-Ray...</li>-->
                 </div>
             </div>
- 
+   <div class="car-card"> 
+               <a href="https://www.instagram.com/vkcshospital/reel/C9w0jnEOYE1/"> <img style="height:400px;weight:200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33VrbCIfDIV6AAxSpFXRwLAmwS6BGpVx5BA&s" alt="Doctor 1" class="doctor-img">
+                  </a>
+                <div class="car-info">
+                    <h3 style="color:red;">Dr Amit chauhan</h3>
+                    
+                    <p style="color:blue;"> DIRECTOR OF <span style="color:green">V</span><span style="color:orange">K</span><span style="color:blue">C</span> <span style="color:red">SMARAK HOSPITAL </span></p>
+                    <p style="color:red;">(Dental Surgeon)</p>
+                    <!--<div class="price">doctor fee only 50 rup</div>-->
+                    <!--<li style="color:green">Treat all patient 400</li>-->
+                    <!--<li style="color:green">And some patient is very poor,so all treatment is free. like that:Mediscience;X-Ray...</li>-->
+                </div>
+            </div>
             <div class="car-card">
                 <a href="https://www.instagram.com/vkcshospital/p/C9UU6nrTgUw/?api=1&hl=zh-cn"> <img style="height:400px;weight:200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiip2mLCClhmSDZdmdZ-hF73lw7y1tVoNd3Q&s" alt="Doctor 2" class="car-img">
                 <div class="car-info">
                 </a>
                     <h3 style="color:red;">Dr Rajesh chauhan</h3>
-                    <p style="color:blue;">MBBS MD</p>
-                    <div class="price">doctor fee only 50 rup</div>
-                    <li style="color:green">Treat all patient 750</li>
-                    <li style="color:green">He is Honour this Hospital and he is great person.</li>
+                     <p style="color:blue;"> DIRECTOR OF VKC SMARAK HOSPITAL </p>
+                    <p style="color:blue;">BAMS MD</p>
+                    <!--<div class="price">doctor fee only 50 rup</div>-->
+                    <!--<li style="color:green">Treat all patient 750</li>-->
+                    <!--<li style="color:green">He is Honour this Hospital and he is great person.</li>-->
                     
                 </div>
             </div>
@@ -378,47 +472,61 @@
                 <div class="car-info">
                    <h3 style="color:red;">Dr Rajan chauhan</h3>
                     <p style="color:blue;">BAMS MD (Generalphysician)</p>
-                    <div class="price">doctor fee only 50 rup</div>
-                    <li style="color:green">Treat all patient 600</li>
-                    <li style="color:green">He is a very talented person and in a way be treat a patient.</li>
+                    <!--<div class="price">doctor fee only 50 rup</div>-->
+                    <!--<li style="color:green">Treat all patient 600</li>-->
+                    <!--<li style="color:green">He is a very talented person and in a way be treat a patient.</li>-->
                 </div>
             </div>
              </div>
-        <section id="feature" class="video">
-    <div>
-      <iframe  src="https://youtube.com/shorts/FkH00ahG42o?si=OEW1C8Jjz2kkuRSa" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-   <h3 style="color:red;">Drx Dharmesh chauhan</h3>
-          <li style="color:green">Treat all patient 750</li>
-                    <li style="color:green">He is a very talented person and in a way be treat a  patient.</li>
-                    
-    </div>
-    </section>   
-    </div>
+             
+        </div>
     </section>
     
-   <section id="thought"  class="doctor's thought">
-       <h2 style="color:orange" class="section-title">Doctor's thought</h2>
-       
-      <div style="display:flex; justify-content:space-betweeen" class="doctor-card">
-      <div class="doctor-card">
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBO1I5PHYu7NhcDYZa2O1E4JtTin9JzE5ob8AJHGO-fsQelYwN4ch8zLAQzH_75fu-pQ&usqp=CAU" alt="Doctor 1" class="doctor-img">
-     <div class="doctor-info">
-  <h3 style="color:red">Dr Amit chauhan</h3>
- </div>
-      </div>
-   <div class="doctor-card">
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiip2mLCClhmSDZdmdZ-hF73lw7y1tVoNd3Q&s" alt="Doctor 2" class="doctor-img">
-     <div class="doctor-info">
-  <h3 style="color:red">Dr Rajesh chauhan</h3>
- </div>
- </div>
-  <div class="doctor-card">
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTayoD_DapOmwqERvnJWAu090loq-xwlY3a3g&s" alt="Doctor 3" class="doctor-img">
-     <div class="doctor-info">
-   <h3 style="color:red">Dr Rajan chauhan</h3>
+    
+    
+     <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <h2 class="section-title">Photo Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+            <h2 style="color:red">Emergency Care</h2>
+                <img src="https://assets.onecompiler.app/4352m5atk/43dbnq7wf/WhatsApp%20Image%202025-03-30%20at%205.17.22%20PM.jpeg" alt="India">
+            </div>
+            <div class="gallery-item">
+                <h2 style="color:red">Emergency Care</h2>
+                <img src="https://assets.onecompiler.app/4352m5atk/43dbnq7wf/WhatsApp%20Image%202025-03-30%20at%205.16.08%20PM%20(1).jpeg" alt="India">
+            </div>
+            <div class="gallery-item">
+               <h2 style="color:RED">Emergency Care</h2>
+                <img src="https://assets.onecompiler.app/4352m5atk/43dbnq7wf/WhatsApp%20Image%202025-03-30%20at%205.15.41%20PM.jpeg" alt="India">
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTqxOwZ92EbthVbjPiNlX-6OmUGkTM3EIbXhKfFHotg_Gz4S5380LdYyaOE9GKMZxAk6I&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTqxOwZ92EbthVbjPiNlX-6OmUGkTM3EIbXhKfFHotg_Gz4S5380LdYyaOE9GKMZxAk6I&usqp=CAU" alt="India">
+            </div>
+        </div>
     </section>
+ <!--  <section id="thought"  class="doctor's thought">-->
+ <!--      <h2 style="color:orange" class="section-title">Doctor's thought</h2>-->
+       
+ <!--     <div style="display:flex; justify-content:space-betweeen" class="doctor-card">-->
+ <!--     <div class="doctor-card">-->
+ <!--    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBO1I5PHYu7NhcDYZa2O1E4JtTin9JzE5ob8AJHGO-fsQelYwN4ch8zLAQzH_75fu-pQ&usqp=CAU" alt="Doctor 1" class="doctor-img">-->
+ <!--    <div class="doctor-info">-->
+ <!-- <h3 style="color:red">Dr Amit chauhan</h3>-->
+ <!--</div>-->
+ <!--     </div>-->
+ <!--  <div class="doctor-card">-->
+ <!--    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiip2mLCClhmSDZdmdZ-hF73lw7y1tVoNd3Q&s" alt="Doctor 2" class="doctor-img">-->
+ <!--    <div class="doctor-info">-->
+ <!-- <h3 style="color:red">Dr Rajesh chauhan</h3>-->
+ <!--</div>-->
+ <!--</div>-->
+ <!-- <div class="doctor-card">-->
+ <!--    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTayoD_DapOmwqERvnJWAu090loq-xwlY3a3g&s" alt="Doctor 3" class="doctor-img">-->
+ <!--    <div class="doctor-info">-->
+ <!--  <h3 style="color:red">Dr Rajan chauhan</h3>-->
+ <!--   </section>-->
   
-   
    
     <section  id="about" class="about">
         <div class="about-content">
@@ -456,39 +564,49 @@
         </div>
     </section>
  
-    <section id="contact" class="contact">
-        <h2 style="color:orange;"class="section-title">Contact Us</h2>
-        <form class="contact-form">
-            <div class="form-group">
-                <label style="color:red;"for="name">Name</label>
-                <input type="text" id="name" required>
-            </div>
-            <div class="form-group">
-                <label style="color:red;" for="email">Email</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label style="color:red;" for="Contact number">Contact number</label>
-               <input type="number" id="number"required>
-            </div>
-            <div class="form-group"
-            <label style="color:red;"for="Address">Address</label>
-            <textarea id="Message" rows="2" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">SignUp</button>
+    <!--<section id="contact" class="contact">-->
+    <!--    <h2 style="color:orange;"class="section-title">Contact Us</h2>-->
+    <!--    <form class="contact-form">-->
+    <!--        <div class="form-group">-->
+    <!--            <label style="color:red;"for="name">Name</label>-->
+    <!--            <input type="text" id="name" required>-->
+    <!--        </div>-->
+    <!--        <div class="form-group">-->
+    <!--            <label style="color:red;" for="email">Email</label>-->
+    <!--            <input type="email" id="email" required>-->
+    <!--        </div>-->
+    <!--        <div class="form-group">-->
+    <!--            <label style="color:red;" for="Contact number">Contact number</label>-->
+    <!--           <input type="number" id="number"required>-->
+    <!--        </div>-->
+    <!--        <div class="form-group"-->
+    <!--        <label style="color:red;"for="Address">Address</label>-->
+    <!--        <textarea id="Message" rows="2" required></textarea>-->
+    <!--        </div>-->
+    <!--        <button type="submit" class="submit-btn">SignUp</button>-->
             
-        </form>
-    </section>
+    <!--    </form>-->
+    <!--</section>-->
     <section id="locatation" class="maps">
     <div>
       <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.3617129581176!2d78.0721439745747!3d28.67882458197866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390b6feb6cd4edf7%3A0xf709f42f257d06bd!2sVKC%20SMARAK%20MULTI-SPECIALITY%20HOSPITAL!5e0!3m2!1sen!2sin!4v1737536665087!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     </section>
-    
- 
-    <footer>
-        <p>&copy; VKC Smarak hospital. All rights reserved.</p>
+     
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>VKC SMARAK HOSPITAL</h3>
+            <p>Best quality treatment and best quality care all under one roof.....</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                 <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </footer>
+    
 </body>
 </html>
 
